@@ -1,0 +1,33 @@
+Indentation
+PEP 8 recommends that you use four spaces per indentation level. Using
+four spaces improves readability while leaving room for multiple levels of
+indentation on each line
+
+Line Length
+Many Python programmers recommend that each line should be less than
+80 characters. Historically, this guideline developed because most computers could fit only 79 characters on a single line in a terminal window.
+Currently, people can fit much longer lines on their screens, but other reasons exist to adhere to the 79-character standard line length. Professional
+programmers often have several files open on the same screen, and using
+the standard line length allows them to see entire lines in two or three files
+that are open side by side onscreen. PEP 8 also recommends that you limit
+all of your comments to 72 characters per line, because some of the tools
+that generate automatic documentation for larger projects add formatting
+characters at the beginning of each commented line.
+The PEP 8 guidelines for line length are not set in stone, and some
+teams prefer a 99-character limit. Don’t worry too much about line length
+in your code as you’re learning, but be aware that people who are working collaboratively almost always follow the PEP 8 guidelines. Most editors
+allow you to set up a visual cue, usually a vertical line on your screen, that
+shows you where these limits are. 
+
+
+Blank Lines
+To group parts of your program visually, use blank lines. You should use
+blank lines to organize your files, but don’t do so excessively. By following
+the examples provided in this book, you should strike the right balance. For
+example, if you have five lines of code that build a list, and then another
+three lines that do something with that list, it’s appropriate to place a blank
+line between the two sections. However, you should not place three or four
+blank lines between the two sections.
+Blank lines won’t affect how your code runs, but they will affect the
+readability of your code. The Python interpreter uses horizontal indentation to interpret the meaning of your code, but it disregards vertical
+spacing
