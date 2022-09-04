@@ -1,0 +1,30 @@
+Object-oriented programming is one of the
+most effective approaches to writing software. In object-oriented programming you
+write classes that represent real-world things
+and situations, and you create objects based on these
+classes. When you write a class, you define the general
+behavior that a whole category of objects can have. 
+
+The __init__() method is a special method
+Python runs automatically whenever we create a new instance based on the
+Dog class. This method has two leading underscores and two trailing underscores, a convention that helps prevent Python’s default method names
+from conflicting with your method names.
+
+The self parameter is required in the method definition, and it
+must come first before the other parameters. It must be included in the definition because when Python calls this __init__() method later (to create an
+instance of Dog), the method call will automatically pass the self argument.
+Every method call associated with a class automatically passes self, which
+is a reference to the instance itself; it gives the individual instance access to
+the attributes and methods in the class. When we make an instance of Dog,
+Python will call the __init__() method from the Dog class. We’ll pass Dog()
+a name and an age as arguments; self is passed automatically, so we don’t
+need to pass it. Whenever we want to make an instance from the Dog class,
+we’ll provide values for only the last two parameters, name and age.
+
+The two variables defined each have the prefix self. Any variable
+prefixed with self is available to every method in the class, and we’ll also be
+able to access these variables through any instance created from the class.
+self.name = name takes the value stored in the parameter name and stores it
+in the variable name, which is then attached to the instance being created.
+The same process happens with self.age = age. Variables that are accessible
+through instances like this are called attributes.

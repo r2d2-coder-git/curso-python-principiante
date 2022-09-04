@@ -17,7 +17,13 @@ last_element = motorcycles.pop()
 element = motorcycles.pop(0)
 #Remove element by value (The remove() method deletes only the first occurrence of the value you specify)
 motorcycles.remove('yamaha')
+#Removing All Instances of Specific Values from a List
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+while 'cat' in pets:
+ pets.remove('cat')
 
+print(pets)
 
 ################# SORT ######################
 
