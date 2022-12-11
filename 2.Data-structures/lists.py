@@ -11,72 +11,64 @@
 #Las listas permiten valores duplicados.
 
 ################### 1.CREACIÓN DE LISTAS #####################
+
 # 1. Lista vacía
 lista_vacia = []
 lista_vacia = list()
 # 2. Lista con elementos
-motorcycles = ['honda', 'yamaha', 'suzuki','honda']
+motocicletas = ['honda', 'yamaha', 'suzuki','honda']
 
 ################### 2.INSERCIONES Y ACTUALIZACIONES #####################
-# 1. Añade un elemento al final de la lista
-motorcycles.append('ducati')
-# 2. Añade un elemento en una posición de la lista, empezando por 0.
-motorcycles.insert(0, 'daelim')
-# 3. Actualizar una lista es muy fácil, sólo tienes que sobreescribir la posición. 
-motorcycles[1] = 'bmw'
+
+motocicletas.append('ducati') #Añade un elemento al final de la lista
+motocicletas.insert(0, 'daelim') #Añade un elemento en una posición de la lista.
+motocicletas[1] = 'bmw' #Actualizar una lista es muy fácil, sólo tienes que sobreescribir la posición. 
 
 ################### 3.BORRADOS #####################
-# 1. Tambien podemos borrar un elemento especifico con pop y obtener el valor borrado.
-element = motorcycles.pop(0)
-# 2. Por defecto borrar el ultimo elemento de la lista.
-last_element = motorcycles.pop()
-# 3. Borrar un elemento de la lista, solo borra la primera apariencia del elemento indicado y no devuelve nada.
-motorcycles.remove('yamaha')
-# 4. Borrar un elemento de la lista.
-while 'honda' in motorcycles:
-    motorcycles.remove('honda')
-# 5. Borra todos los elementos de una lista
-motorcycles.clear()
 
+elemento_cero = motocicletas.pop(0) #Borra el elemento que esté en el índice pasado por parámetro con pop y obtiene el valor borrado.
+ultimo_elemento = motocicletas.pop() #El método pop sin un parámetro borra el último elemento de la lista.
+motocicletas.remove('yamaha') #Borra la primera apariencia del elemento indicado y no devuelve nada
+motocicletas.clear() #Borra todos los elementos de una lista
+# Borrar todas las apariciones de un elemento de la lista.
+while 'honda' in motocicletas:
+    motocicletas.remove('honda')
+    
 ################# 4.SORT ######################
-# 1. Ordenar alfabeticamente
+
 vocales = ['e','i','o','u','a']
-vocales.sort()
-vocales.sort(reverse=True)
-# 2. Si queremos ver un lista ordenada pero no ordenarla realmente. 
-sorted(vocales)
-# 3. Darle la vuelta a una lista
-vocales.reverse()
-# 4. Le podemos asignar un criterio de ordenación.
-def order_by_length(element):
-  return len(element)
-cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']
-cars.sort(key=order_by_length)
+vocales.sort() #Ordenar alfabeticamente de forma ascendente [a,e,i,o,u]
+vocales.sort(reverse=True) #Ordenar alfabeticamente de forma ascendente [u,o,i,e,a]
+vocales.reverse() #Darle la vuelta a una lista
+# Le podemos asignar un criterio de ordenación.
+def ordenar_por_longitud(elemento):
+  return len(elemento)
+
+coches = ['Ford', 'Mitsubishi', 'BMW', 'VW']
+coches.sort(key=ordenar_por_longitud)
 
 ################# 5.OTROS MÉTODOS ######################
-my_foods = ['pizza', 'tacos', 'kebab', 'pizza', 'hamburguesa', 'pizza', 'tacos']
-# 1. IMPORTANT [:] Importante no asignar una lista a otra variable para copia la lista, 
+
+comida = ['pizza', 'tacos', 'kebab', 'pizza', 'hamburguesa', 'pizza', 'tacos']
+# IMPORTANTE: No asignar una lista a otra variable para copia la lista, 
 # van a apuntar a la misma zona de memoria (friends_foods = my_foods no funciona)
-copy_of_food = my_foods[:]
-copy_of_food_version_two = my_foods.copy()
-# 2. Contar el número de elementos de un valor específico.
-pizza_number = my_foods.count('pizza')
-# 3. Añadir una lista a otra lista. 
-my_foods.extend(['ensalada', 'manzana'])
-my_foods = my_foods + ['ensalada', 'manzana']
-# 4. Devuelve el indice de la primera aparición de un elemento de la lista.
-my_foods.index('pizza') #Devuelve 0
+copia_de_comida = comida[:] #Una forma de hacer copia de listas.
+copia_de_comida = comida.copy() #Forma oficial de hacer copia de listas.
+cuenta_pizzas = comida.count('pizza') #Contar el número de elementos de un valor específico, en este caso el resultado es 3.
+comida.extend(['ensalada', 'manzana']) #Añadir una lista a otra lista, una forma de hacerlo. 
+comida = comida + ['ensalada', 'manzana'] #Añadir una lista a otra lista, otra forma de hacerlo. 
+comida.index('pizza') #Devuelve el indice de la primera aparición de un elemento de la lista, en este caso el índice 0.
 
 
-# 5. Rangos númericos con la función range(x,y-1) El tipico for (i; i < x; i++) eso en python no existe.
-for value in list(range(1, 5)):
-    print(value)
+# 6. Rangos númericos con la función range(x,y-1) El tipico for (i; i < x; i++) eso en python no existe.
+for numero in list(range(1, 5)):
+    print(numero)
 
-even_numbers = list(range(2, 11, 2))  # Lista de pares del 2 al 10
+numeros_pares = list(range(2, 11, 2))  # Lista de pares del 2 al 10
 
-# 6. Funciones Built-in de python que se pueden aplicar sobre las listas
-min(even_numbers)  # Minimo de una lista
-max(even_numbers)  # Maximo de una lista
-sum(even_numbers)  # Suma los elementos de la lista
-len(even_numbers)  # Longitud de la lista
-
+# 7. Funciones Built-in de python que se pueden aplicar sobre las listas
+min(numeros_pares)  # Minimo de una lista
+max(numeros_pares)  # Maximo de una lista
+sum(numeros_pares)  # Suma los elementos de la lista
+len(numeros_pares)  # Longitud de la lista
+sorted(numeros_pares) # Si queremos ver una lista ordenada pero no ordenarla realmente. 

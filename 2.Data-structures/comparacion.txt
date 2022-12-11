@@ -1,0 +1,9 @@
+¿Como son los datos que voy a almacenar?
+
+#R: Inmutables, no me importa el orden en el que se almacenen y no tengo duplicados, entonces SET. 
+#R: Inmutables y me importa el orden en el que se almacenen, entonces TUPLAS.
+#R: Mutables y me importa el orden en el que se almacenen, entonces LISTAS.
+#R: Mutables y no me importa el orden en el que se almacenen, entonces LISTAS.
+
+#Eficiencia espacio memoria: Tuplas >> Listas >> Sets (Tuplas lo mejor, sets lo peor.)
+#Eficiencia en inserción y acceso (Tiempo CPU): Sets >> Tuplas >> Listas (Sets lo mejor, lista lo peor.)

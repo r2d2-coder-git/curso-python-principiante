@@ -1,5 +1,6 @@
 #TIPOS DE DATOS BÁSICOS (Hacer una diapositiva)
-#Como bien sabemos una variable es un espacio asignado en memoria RAM y que ocupa un tamaño dependiendo de su tipo de datos, los tipos de datos básicos que implementa python por defecto son los siguientes.
+#Como bien sabemos una variable es un espacio asignado en memoria RAM y que ocupa un tamaño dependiendo de su tipo de datos, 
+# los tipos de datos básicos que implementa Python por defecto son los siguientes.
 
 #Números (Entero, float, complejo)
 contador : int = 0
