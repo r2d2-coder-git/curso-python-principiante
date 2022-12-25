@@ -26,6 +26,8 @@ del tupla_vacia #Borra una tupla de memoria, no se pueden hacer borrados por ele
 
 ################### 4.OPERACIONES DE TUPLAS #####################
 tupla_tres = tupla_uno + tupla_dos #Unión de tuplas
+index_arturo = tupla_uno.index('Arturo') #Devuelve el indice de la primera aparición de ese elemento, en este caso, devuelve 0.
+count_coder = tupla_uno.count('Coder') #Devuelve el número de aparaciones del elemento que se pasa por parámetro, en este caso, devuelve 1.
 
 ################### 5.OTROS METODOS #####################
 tupla_num = (1,2,3)
@@ -38,7 +40,3 @@ len(tupla_num)  # Longitud de la lista
 ################### 6.ACCESO A LOS TUPLAS #####################
 for elemento in tupla_tres:
     print(elemento)
-
-
-
-
