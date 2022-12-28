@@ -55,6 +55,7 @@ tecnologias_web = tecnologias.get('Web','No existe la clave Web') #Devuelve el v
 tecnologias_sistemas = tecnologias.setdefault('Sistemas', 'C++') #Devuelve el valor asociado a la clave Sistemas, si no existe añade el elemento {'Sistemas':'C++'} y devuelve C++.
 tecnologias_items = tecnologias.items() #Devuelve un objeto dict_items que contien una lista de tuplas, una tupla por cada clave-valor. Tupla (key, value)
 tecnologia_keys = tecnologias.keys() #Devuelve un objeto dict_keys que contiene una lista con las claves del diccionario.
+tecnologias_ordenadas_alfabeticamente = dict(sorted(tecnologias.items())) #Ordenar un diccionario por clave y alfabeticamente
 
 for key, value in tecnologias.items(): #Recorrido de un diccionario.
     print(f"La clave {key} está asociado al valor {value}")
