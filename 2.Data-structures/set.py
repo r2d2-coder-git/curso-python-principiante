@@ -63,3 +63,4 @@ print(dir(frozen_set)) #Métodos disponibles: 'copy', 'difference', 'intersectio
 #No hay una forma de acceder de forma indexada
 for element in set_uno:
     print(element)
+
