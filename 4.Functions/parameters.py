@@ -1,20 +1,23 @@
-def comer_manzana_valor(manzanas):
-    manzanas -= 1
+############################# PARAMETROS POR VALOR #####################################
 
-def comer_manzana_referencia(manzanas):
-    manzanas[0] -= 1
-    
-def main():
-    manzanas = 10
-    print(f"Antes de pasar manzanas por valor, tengo {manzanas} manzanas.")
-    comer_manzana_valor(manzanas)
-    print(f"Despues de pasar manzanas por valor, tengo {manzanas} manzanas, NO SE MODIFICA LA VARIABLE.")
+# En Python los tipos de datos simples se pasan por valor: ENTEROS, FLOATS, STRINGS, BOOLEANOS, es decir, la variable que se pasa por parámetros 
+# no se modifica, se hace una copia dentro de la función.
 
-#def main():
-#    manzanas = [10]
-#    print(f"Antes de pasar manzanas por referencia, tengo {manzanas[0]} manzanas.")
-#    comer_manzana_referencia(manzanas)
-#    print(f"Despues de pasar manzanas por referencia, tengo {manzanas[0]} manzanas, SI SE MODIFICA LA VARIABLE.")
+def comer_manzana_valor(numero_manzanas : int) -> None:
+    numero_manzanas = numero_manzanas - 1
 
-if __name__ == '__main__':
-    main()
+manzanas = 10
+comer_manzana_valor(manzanas)
+print(manzanas)
+
+############################# PARAMETROS POR REFERENCIA #####################################
+
+# En Python los tipos de datos compuestos se pasan por referencia: LISTAS, DICCIONARIOS, CONJUNTOS, es decir, si modificamos la colección pasada por
+# parámetro la colección se verá afectada después de la ejecución de la función.
+
+def comer_manzana_referencia(manzanas : list) -> None:
+    manzanas[0] = manzanas[0] - 1
+
+manzanas = [10] 
+comer_manzana_referencia(manzanas)
+print(manzanas)
