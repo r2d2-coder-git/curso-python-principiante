@@ -11,6 +11,8 @@ es_verdad : bool = True
 es_mentira : bool = False
 #String
 mi_nombre : str = 'r2d2.coder'
+#Tipo compuesto (La variable puede ser de tipo entero o float)
+dinero : int|float = 5.0
 
 #OPERADORES (Hacer una diapositiva)
 #Un operador es un signo que utilizamos para señalar que operacion realizamos entre dos o más operandos, por ejemplo el operador de suma, el de resta, multiplicación y otros más específicos de la programación
