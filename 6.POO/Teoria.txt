@@ -1,30 +1,47 @@
-Object-oriented programming is one of the
-most effective approaches to writing software. In object-oriented programming you
-write classes that represent real-world things
-and situations, and you create objects based on these
-classes. When you write a class, you define the general
-behavior that a whole category of objects can have. 
+La programación orientada a objetos es uno de los
+enfoques más eficaces para escribir software. En la programación orientada a objetos
+se escriben clases que representan cosas y
+y situaciones del mundo real, y se crean objetos basados en estas clases.
+clases. Cuando se escribe una clase, se define el comportamiento general que puede tener toda una categoría de objetos.
+general que puede tener toda una categoría de objetos. 
 
-The __init__() method is a special method
-Python runs automatically whenever we create a new instance based on the
-Dog class. This method has two leading underscores and two trailing underscores, a convention that helps prevent Python’s default method names
-from conflicting with your method names.
+El método __init__() es un método especial
+que Python ejecuta automáticamente cada vez que creamos una nueva instancia basada en la clase
+Perro. Este método tiene dos guiones bajos iniciales y dos guiones bajos finales, una convención que ayuda a prevenir que los nombres de métodos por defecto de Python
+de Python entren en conflicto con los nombres de sus métodos.
 
-The self parameter is required in the method definition, and it
-must come first before the other parameters. It must be included in the definition because when Python calls this __init__() method later (to create an
-instance of Dog), the method call will automatically pass the self argument.
-Every method call associated with a class automatically passes self, which
-is a reference to the instance itself; it gives the individual instance access to
-the attributes and methods in the class. When we make an instance of Dog,
-Python will call the __init__() method from the Dog class. We’ll pass Dog()
-a name and an age as arguments; self is passed automatically, so we don’t
-need to pass it. Whenever we want to make an instance from the Dog class,
-we’ll provide values for only the last two parameters, name and age.
+El parámetro self es requerido en la definición del método, y debe ir primero antes que los otros parámetros.
+debe ir primero antes que los otros parámetros. Debe incluirse en la definición porque cuando Python llame a este método __init__() más tarde (para crear una instancia de
+instancia de Dog), la llamada al método pasará automáticamente el argumento self.
+Cada llamada a un método asociado a una clase pasa automáticamente el argumento self, que es una referencia a la propia instancia.
+es una referencia a la instancia misma; le da acceso a los atributos y métodos de la clase.
+a los atributos y métodos de la clase. Cuando creamos una instancia de Perro,
+Python llamará al método __init__() de la clase Dog. Le pasaremos a Dog()
+un nombre y una edad como argumentos; self se pasa automáticamente, así que no necesitamos pasarlo.
+necesitamos pasarlo. Cuando queramos crear una instancia de la clase Dog,
+proporcionaremos valores sólo para los dos últimos parámetros, nombre y edad.
 
-The two variables defined each have the prefix self. Any variable
-prefixed with self is available to every method in the class, and we’ll also be
-able to access these variables through any instance created from the class.
-self.name = name takes the value stored in the parameter name and stores it
-in the variable name, which is then attached to the instance being created.
-The same process happens with self.age = age. Variables that are accessible
-through instances like this are called attributes.
+Las dos variables definidas tienen el prefijo self. Cualquier variable
+Cualquier variable con el prefijo self está disponible para todos los métodos de la clase, y también podremos acceder a estas variables a través de cualquier instancia de la clase Dog.
+a través de cualquier instancia creada a partir de la clase.
+self.nombre = nombre toma el valor almacenado en el parámetro nombre y lo almacena
+en la variable name, que luego se adjunta a la instancia que se está creando.
+El mismo proceso ocurre con self.age = edad. Las variables accesibles
+a través de instancias se denominan atributos.
+
+************** ATRIBUTOS **********************
+En programación orientada a objetos (OOP, por sus siglas en inglés), private, public y protected son modificadores de acceso que se utilizan para controlar el alcance de los 
+miembros de una clase (es decir, sus atributos y métodos).
+
+private: los miembros con este modificador de acceso son solo accesibles desde dentro de la clase en la que se declaran.
+public: los miembros con este modificador de acceso son accesibles desde cualquier lugar del código.
+protected: los miembros con este modificador de acceso son accesibles desde la clase en la que se declaran y también desde cualquier clase que herede de ella.
+
+En general, se recomienda seguir la regla de la menor privacidad necesaria, es decir, declarar los miembros de una clase con el modificador de acceso más restringido que permita la correcta
+ implementación del código. Esto ayuda a proteger la integridad de la información al restringir el acceso a los miembros solo a los lugares donde es necesario, y también hace que el código sea más fácil de mantener y entender.
+
+En python:
+
+Publico = Sin nada.
+Protected = _nombre_atributo una _ delante del nombre.
+Private = __nombre_atributo dos _ delante del nombre.
