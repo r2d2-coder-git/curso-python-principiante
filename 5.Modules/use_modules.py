@@ -1,20 +1,24 @@
-#Import module
-import modules
-modules.make_pizza(16, 'pepperoni')
-modules.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
+############################# IMPORTAR MODULOS COMPLETOS #####################################
 
-#Import module with alias
-import modules as m 
-m.make_pizza(16, 'pepperoni')
-m.make_pizza(12, 'mushrooms', 'green peppers', 'extra cheese')
-
-#Import some functions of module
-from modules import make_pizza
-make_pizza(16, 'pepperoni')
-
-#Import some functions of module with alias function
-from modules import make_pizza as mp 
-mp(16, 'pepperoni')
-
-#Import all functions of module
+# 1.Importar todas las funciones de un módulo con *.
 from modules import * 
+crear_pizza('margarita','pepperoni')
+
+# 2.Importar todo el módulo.
+import modules
+modules.crear_pizza('margarita', 'pepperoni')
+
+# 3.Importar todo el módulo con un alias.
+import modules as m 
+m.crear_pizza('margarita', 'pepperoni')
+
+############################# IMPORTAR PARTES CONCRETAS DE UN MODULO #####################################
+
+# 1.Importar varias funciones de un módulo.
+from modules import crear_pizza, sacar_dinero
+crear_pizza('margarita', 'pepperoni')
+
+# 2.Importar funciones con alias.
+from modules import crear_pizza as mp, sacar_dinero as sd
+mp('margarita', 'pepperoni')
+
