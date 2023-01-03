@@ -45,3 +45,11 @@ En python:
 Publico = Sin nada.
 Protected = _nombre_atributo una _ delante del nombre.
 Private = __nombre_atributo dos _ delante del nombre.
+
+
+************** METODOS GETTERS AND SETTERS **********************
+
+En python los metodos setters y getters se definen con decoradores.
+
+Enlace en la web: https://www.programiz.com/python-programming/decorator
+

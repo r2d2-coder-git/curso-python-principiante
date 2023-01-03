@@ -1,40 +1,52 @@
-class Car():
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
-        self.odometer_reading = 0
+from clases import Mascota
 
-    def get_descriptive_name(self):
-        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
-        return long_name.title()
 
-    def read_odometer(self):
-        print("This car has " + str(self.odometer_reading) + " miles on it.")
+class Perro(Mascota):
+    __color_pelo: str
+    __raza: str
+    __trofeos_ganados: dict
 
-    def update_odometer(self, mileage):
-        if mileage >= self.odometer_reading:
-            self.odometer_reading = mileage
-        else:
-            print("You can't roll back an odometer!")
+    def __init__(self, nombre, puntos_salud, nivel, edad, color_pelo, raza):
+        super().__init__(nombre, puntos_salud, nivel, edad)
+        self.__color_pelo = color_pelo
+        self.__raza = raza
+        self.__trofeos_ganados = {
+            'Internacional': 0, 'Nacional': 0, 'Regional': 0
+        }
 
-    def increment_odometer(self, miles):
-        self.odometer_reading += miles
+    @property
+    def color_pelo(self):
+        return self.__color_pelo
 
-    def fill_gas_tank(self):
-        print("Tank full!")
+    @color_pelo.setter
+    def color_pelo(self, value):
+        self.__color_pelo = value
 
-#INHERITANCE: We put the parent in (Car) and in the __init__ function with super.
-class ElectricCar(Car):
-    def __init__(self, make, model, year, battery_size):
-        super().__init__(make, model, year)
-        self.battery_size = battery_size
-    def describe_battery(self):
-        print("This car has a " + str(self.battery_size) + "-kWh battery.")
-    #Overriding a parent method
-    def fill_gas_tank(self):
-        print("This car doesn't need a gas tank!")
-my_tesla = ElectricCar('tesla', 'model s', 2016, 70)
-print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery()
-my_tesla.fill_gas_tank()
+    @property
+    def raza(self):
+        return self.__raza
+
+    @raza.setter
+    def raza(self, value):
+        self.__raza = value
+
+    @property
+    def trofeos_ganados(self):
+        return self.__trofeos_ganados.copy()
+
+    @trofeos_ganados.setter
+    def trofeos_ganados(self, value):
+        self.__trofeos_ganados = value.copy()
+
+    # Sobreescritura del método ganar_torneo, utilizamos la funcionalidad del padre y la extendemos para que la clase Perro pueda guardar
+    # los torneos ganados.
+    def ganar_torneo(self, tipo_torneo: str) -> None:
+        super().ganar_torneo(tipo_torneo)
+        if tipo_torneo in self.__trofeos_ganados.keys():
+            self.__trofeos_ganados[tipo_torneo] += 1
+
+
+luisito: Perro = Perro('Luisito', 100, 1, 1, 'Pelirrojo', 'Lulu Pomerania')
+luisito.ganar_torneo('Internacional')
+print(luisito.nivel)
+print(luisito.trofeos_ganados)

@@ -76,7 +76,26 @@ def crear_perfil_usuario(nombre: str, apellidos: str, **kwargs) -> str:
 perfil = crear_perfil_usuario('Arturo', 'Lorenzo')
 perfil_kwargs = crear_perfil_usuario(
     'Arturo', 'Lorenzo', Ciudad='Murcia', Pais='España', Comida_favorita='Pizza')
+
 print(perfil_kwargs)
+
+############################# FUNCIÓNES QUE TIENEN COMO PARÁMETROS FUNCIONES #####################################
+
+# Todo en Python son objetos hasta las funciones por eso podemos pasar una función como parámetro a otra función.
+# En este ejemplo hacemos una función que reciba que tipo de operación tiene que hacer sobre dos números, está operación se define como una función.
+
+
+def sumar(x, y):
+    return x + y
+
+
+def calculadora(operacion, x, y):
+    return operacion(x, y)
+
+
+resultado = calculadora(sumar, 4, 6)
+print(resultado)
+
 
 ############################# ORDEN DE PARÁMETROS #####################################
 
