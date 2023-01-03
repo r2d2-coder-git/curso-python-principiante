@@ -1,5 +1,18 @@
 from clases import Mascota
 
+# Sintaxis:
+# class Hijo(clase_padre1, clase_padre2, clase_padre3):
+#
+#   Atributos clase hija
+#
+#   def __init__(self, atributos):
+#       super().__init__(atributos_padre)
+#       asignación atributos clase hija
+#
+#   Getters y setters de atributos de la clase hija
+#
+#   Metodos de la clase hija y metodos sobrecargados
+
 
 class Perro(Mascota):
     __color_pelo: str
