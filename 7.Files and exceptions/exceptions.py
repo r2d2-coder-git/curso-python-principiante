@@ -1,81 +1,95 @@
-#Use exceptions to prevent crushes in run time.
+############################## ¿QUÉ SON LAS EXCEPCIONES? #####################################
 
-#ZeroDivision exception
- #ZeroDivisionError:
-    
+# Las excepciones son una forma de manejar errores y problemas inesperados que pueden ocurrir durante la ejecución de un programa. 
+# Al utilizar excepciones, puede escribir código para detectar y responder a estos problemas de manera más eficiente y organizada que si simplemente se permitiera que el programa
+# se detuviera o generara resultados incorrectos.
+# Cuando ocurre un error o un problema inesperado durante la ejecución de un programa, se dice que se ha "lanzado una excepción". La forma en que se maneja la excepción depende de 
+# cómo se haya escrito el código. Por ejemplo, se puede escribir código para "atrapar" la excepción y tomar medidas para solucionar el problema, o se puede escribir código para "lanzar" 
+# la excepción a otra parte del programa que sabe cómo manejarla.
+# En resumen, las excepciones son una herramienta útil para manejar errores y problemas inesperados en un programa de manera organizada y controlada.
 
-#FileNotFound exception
-filename = 'alice.txt'
+############################## EXCEPCIONES MÁS COMUNES EN PYTHON POR DEFECTO #####################################
+
+# En Python, hay varias excepciones incorporadas que se pueden utilizar para manejar errores y problemas inesperados. Algunas de las excepciones más comunes y útiles son:
+
+# ValueError: se lanza cuando se proporciona un valor inapropiado para una función o una operación. Por ejemplo, si intenta convertir una cadena a un número entero y la cadena 
+# no tiene un formato válido para un número entero, se lanzará un ValueError.
+
+# TypeError: se lanza cuando se realiza una operación o se llama a una función con un tipo de datos inapropiado. Por ejemplo, si intenta concatenar una 
+# cadena y un número con el operador +, se lanzará un TypeError.
+
+# KeyError: se lanza cuando se intenta acceder a un elemento de un diccionario utilizando una clave que no existe en el diccionario.
+
+# IndexError: se lanza cuando se intenta acceder a un índice fuera de los límites de una lista o una cadena.
+
+# IOError: se lanza cuando se produce un error al intentar leer o escribir un archivo.
+
+# ImportError: se lanza cuando se produce un error al importar un módulo o un paquete.
+
+
+############################## SINTAXIS #####################################
+# try:
+#       codigo que puede provocar excepcion en tiempo de ejecucion.
+# except NombreExcepcion:
+#       codigo que maneje la excepcion cuando ocurra.
+
+ 
+############################## EXCEPCIÓN CUANDO UN FICHERO NO EXISTE #####################################
+
+# La excepción FileNotFoundError ya viene definida por defecto en Python.
+
+filename = 'no_existo.txt'
 try:
     with open(filename) as f_obj:
         contents = f_obj.read()
 except FileNotFoundError:
-    msg = "Sorry, the file " + filename + " does not exist."
+    msg = f"Perdona, el fichero {filename} no existe."
     print(msg)
 
-#CUSTOM EXCEPTIONS
-# define Python user-defined exceptions
-class Error(Exception):
-    """Base class for other exceptions"""
+############################## EXCEPCIONES PERSONALIZADAS SIN CONSTRUCTOR #####################################
+
+# Estas excepciones las lanzamos cuando solo queremos ver un mensaje, sin un comportamiento muy avanzado, como podría ser escribir en un fichero de log el fallo.
+
+class ValorDemasiadoPequenio(Exception):
     pass
 
-
-class ValueTooSmallError(Error):
-    """Raised when the input value is too small"""
+class ValorDemasiadoGrande(Exception):
     pass
 
+numero = 10
 
-class ValueTooLargeError(Error):
-    """Raised when the input value is too large"""
-    pass
-
-
-# you need to guess this number
-number = 10
-
-# user guesses a number until he/she gets it right
 while True:
-    try:
-        i_num = int(input("Enter a number: "))
-        if i_num < number:
-            raise ValueTooSmallError
-        elif i_num > number:
-            raise ValueTooLargeError
-        break
-    except ValueTooSmallError:
-        print("This value is too small, try again!")
-        print()
-    except ValueTooLargeError:
-        print("This value is too large, try again!")
-        print()
+    i_num = int(input("Enter a number: "))
+    if i_num < numero:
+        raise ValorDemasiadoPequenio('El valor es demasiado pequenio.')
+    elif i_num > numero:
+        raise ValorDemasiadoGrande('El valor es demasiado grande')
+    break
+    
 
-print("Congratulations! You guessed it correctly.")
+############################## EXCEPCIONES PERSONALIZADAS CON CONSTRUCTOR #####################################
 
-#Exception with constructor
-"""
-Here, we have overridden the constructor of the Exception class to accept our own custom arguments salary and message. Then, the constructor of the parent 
-Exception class is called manually with the self.message argument using super().
-The custom self.salary attribute is defined to be used later.
-The inherited __str__ method of the Exception class is then used to display the corresponding message when SalaryNotInRangeError is raised.
-We can also customize the __str__ method itself by overriding it.
-"""
-class SalaryNotInRangeError(Exception):
-    """Exception raised for errors in the input salary.
 
-    Attributes:
-        salary -- input salary which caused the error
-        message -- explanation of the error
-    """
+# Aquí, hemos sobreescrito el constructor de la clase Exception para aceptar nuestros propios argumentos personalizados salario y mensaje. Entonces, el constructor de la clase 
+# se llama manualmente con el argumento self.message utilizando super().
+# El atributo personalizado self.salary se define para ser utilizado posteriormente.
+# El método heredado __str__ de la clase Exception se utiliza para mostrar el mensaje correspondiente cuando se produce el error SalaryNotInRangeError.
+# También podemos personalizar el propio método __str__ sobreescribiendolo.
 
-    def __init__(self, salary, message="Salary is not in (5000, 15000) range"):
-        self.salary = salary
-        self.message = message
-        super().__init__(self.message)
-    #This method is what do the Exception class    
+
+class SalarioFueraDeRango(Exception):
+    __salario : int
+    __mensaje : str
+    def __init__(self, salario, mensaje="El salario no está en el rango (5000,15000)."):
+        self.__salario = salario
+        self.__mensaje = mensaje
+        super().__init__(self.__mensaje)
+    
+    #Este metodo define el comportamiento de la excepcion.   
     def __str__(self):
-        return f'{self.salary} -> {self.message}'
+        return f'{self.__salario} -> {self.__mensaje}'
 
 
-salary = int(input("Enter salary amount: "))
-if not 5000 < salary < 15000:
-    raise SalaryNotInRangeError(salary)
+salario = int(input("Enter salary amount: "))
+if not 5000 < salario < 15000:
+    raise SalarioFueraDeRango(salario)

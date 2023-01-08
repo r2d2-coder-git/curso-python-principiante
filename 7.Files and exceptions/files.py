@@ -1,33 +1,29 @@
-"""
-The keyword with closes the file once access to it is no longer needed.
-Notice how we call open() in this program but not close(). You could open
-Files and Exceptions and close the file by calling open() and close(), but if a bug in your program
-prevents the close() statement from being executed, the file may never
-close. This may seem trivial, but improperly closed files can cause data
-to be lost or corrupted. And if you call close() too early in your program,
-you’ll find yourself trying to work with a closed file (a file you can’t access),
-which leads to more errors. It’s not always easy to know exactly when you
-should close a file, but with the structure shown here, Python will figure that
-out for you. All you have to do is open the file and work with it as desired,
-trusting that Python will close it automatically when the time is right.
-Once we have a file object representing pi_digits.txt, we use the read()
-method in the second line of our program to read the entire contents of
-the file and store it as one long string in contents. When we print the value
-of contents, we get the entire text file back.
-"""
+# La palabra clave WITH cierra el archivo una vez que ya no se necesita acceder a él observa que en este programa llamamos a open() pero no a close(). Se podría abrir
+# archivo y cerrar el archivo llamando a open() y close(), pero si un error en su programa impide que se ejecute la sentencia close(), puede que el archivo nunca
+# cierre. Esto puede parecer trivial, pero los archivos mal cerrados pueden causar que los datos se pierdan o se corrompan. Y si llama a close() demasiado pronto en su programa,
+# te encontrarás intentando trabajar con un archivo cerrado (un archivo al que no puedes acceder), lo que conduce a más errores. No siempre es fácil saber exactamente cuándo se debe 
+# cerrar un archivo. Pero con la estructura que se muestra aquí, Python lo averiguará por ti.Todo lo que tienes que hacer es abrir el archivo y trabajar con él como desees,
+# confiando en que Python lo cerrará automáticamente cuando sea el momento adecuado.
+
 filename = './pi_digits.txt'
-#Reading all content of the file
+############################# LEER EL FICHERO COMPLETO EN UNA VARIABLE #####################################
+
 with open(filename) as file_object:
     contents = file_object.read()
     print(contents)
-#Reading line by line of the file
+    
+############################# LEER EL FICHERO LINEA A LINEA #####################################
+
 with open(filename) as file_object:
     for line in file_object:
         print(line)
-#Making a list of lines from file
+        
+############################# LEER EL FICHERO LINEA A LINEA #####################################
 with open(filename) as file_object:
     lines = file_object.readlines()
-#Writing text file
+
+
+############################# ESCRIBIR CONTENIDO EN EL FICHERO #####################################
 filename = 'programming.txt'
 with open(filename, 'w') as file_object: #open has options: 'r' (read mode) 'w' (write mode) 'a' (append mode)
     file_object.write("I love programming.")
