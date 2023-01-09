@@ -68,10 +68,10 @@ class TestEncuestaEficiente(unittest.TestCase):
         self.assertIn(self.respuestas[0], self.encuesta.respuestas)
 
     def test_guardar_multiples_respuestas(self):
-        for response in self.responses:
-            self.my_survey.store_response(response)
-        for response in self.responses:
-            self.assertIn(response, self.my_survey.responses)
+        for respuesta in self.respuestas:
+            self.encuesta.guardar_respuesta(respuesta)
+        for respuesta in self.respuestas:
+            self.assertIn(respuesta, self.encuesta.respuestas)
 
 
 # Esta llamada a main ejecuta los 3 tests aunque vengan de clases distintas porque las dos heredan de unittest.TestCase

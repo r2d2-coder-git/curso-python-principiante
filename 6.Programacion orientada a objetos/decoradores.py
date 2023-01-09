@@ -39,103 +39,81 @@ result = add_five(5, 5)
 ############################# DECORADORES SIN PARAMETROS #####################################
 
 
-def make_pretty(func):
-    # define the inner function
-    def inner():
-        # add some additional behavior to decorated function
-        print("I got decorated")
+def funcion_decoradora(func):
 
-        # call original function
+    def funcion_interna():
+        print("Soy una funcion interna y te han decorado")
         func()
-    # return the inner function
-    return inner
-
-# define ordinary function
+    return funcion_interna
 
 
-def ordinary():
-    print("I am ordinary")
+@funcion_decoradora
+def funcion_normal():
+    print("Soy una función normal")
 
 
-# decorate the ordinary function
-decorated_func = make_pretty(ordinary)
-
-# call the decorated function
-decorated_func()
-
-
-def make_pretty(func):
-
-    def inner():
-        print("I got decorated")
-        func()
-    return inner
-
-
-@make_pretty
-def ordinary():
-    print("I am ordinary")
-
-
-ordinary()
+# La segunda ejecución haría exactamente lo mismo si funcion_normal no estuviese decorada
+funcion_normal()
+funcion_decorada = funcion_decoradora(funcion_normal)
 
 ############################# DECORADORES CON PARAMETROS #####################################
 
 
-def smart_divide(func):
-    def inner(a, b):
-        print("I am going to divide", a, "and", b)
+def dividir_inteligente(func):
+    def funcion_interna(a, b):
+        print("Voy a dividir ", a, " y ", b)
         if b == 0:
-            print("Whoops! cannot divide")
+            print("Ooops! No está permitido dividir por cero!")
             return
 
         return func(a, b)
-    return inner
+    return funcion_interna
 
 
-@smart_divide
-def divide(a, b):
+@dividir_inteligente
+def dividir(a, b):
     print(a/b)
 
 
-divide(2, 5)
+dividir(2, 5)
 
-divide(2, 0)
+dividir(2, 0)
 
 ############################# ENCADENAMIENTO DE DECORADORES #####################################
 
 
-def star(func):
-    def inner(*args, **kwargs):
+def estrella(func):
+    def funcion_interna(*args, **kwargs):
         print("*" * 15)
         func(*args, **kwargs)
         print("*" * 15)
-    return inner
+    return funcion_interna
 
 
-def percent(func):
-    def inner(*args, **kwargs):
+def porcentaje(func):
+    def funcion_interna(*args, **kwargs):
         print("%" * 15)
         func(*args, **kwargs)
         print("%" * 15)
-    return inner
+
+    return funcion_interna
 
 # 1. Opcion con decoradores
 
 
-@star
-@percent
+@estrella
+@porcentaje
 def printer(msg):
     print(msg)
 
-# 2. Opcion sin decoradores
-#
-
-
-def printer(msg):
-    print(msg)
-
-
-printer = star(percent(printer))
 
 printer("Hello")
+
+# 2. Opcion sin decoradores
+
+
+def printer(msg):
+    print(msg)
+
+
+printer = estrella(porcentaje(printer))
