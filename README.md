@@ -2,17 +2,18 @@
 Este es un curso completo de Python, diseñado para llevar a cualquier persona desde principiantes hasta programadores experimentados. A lo largo de este curso, aprenderás los conceptos básicos de la programación y cómo aplicarlos en Python.
 
 <h2> Temas cubiertos </h2>
-Introducción a la programación y a Python
-Tipos de datos básicos y operadores en Python
-Estructuras de control de flujo (if, for, while)
-Funciones
-Módulos y paquetes
-Trabajar con archivos
-Trabajar con cadenas
-Trabajar con diccionarios y conjuntos
-Trabajar con archivos JSON y CSV
-Introducción a la orientación a objetos
-Requisitos previos
+- Introducción a la programación y a Python
+- Tipos de datos básicos y operadores en Python
+- Estructuras de control de flujo (if, for, while)
+- Funciones
+- Módulos y paquetes
+- Trabajar con archivos
+- Trabajar con cadenas
+- Trabajar con diccionarios y conjuntos
+- Trabajar con archivos JSON y CSV
+- Introducción a la orientación a objetos
+
+<h2>Requisitos previos</h2>
 Este curso asume que no tienes experiencia previa en programación. Sin embargo, se recomienda tener una comprensión básica de cómo funciona una computadora (por ejemplo, saber cómo usar un sistema operativo y cómo navegar por archivos y carpetas).
 
 <h2>¿Cómo seguir este curso?</h2>
