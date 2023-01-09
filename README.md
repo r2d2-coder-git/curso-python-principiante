@@ -27,4 +27,4 @@ Cada lección incluye explicaciones escritas y videos, así como ejercicios y pr
 Para seguir este curso, necesitarás una computadora con Python 3 instalado. También se recomienda utilizar un editor de código (como PyCharm o Visual Studio Code) y descargar los archivos de ejemplo y ejercicios del curso.
 
 ## ¿Qué puedes esperar de este curso? ##
-Al final de este curso, deberías tener una comprensión sólida de los conceptos básicos de la programación y cómo aplicarlos en Python. También deberías ser capaz de escribir programas simples y resolver problemas de programación utilizando Python. Si completas todos los ejercicios y problemas del curso, deberías estar bien preparado para continuar aprendiendo Python de
+Al final de este curso, deberías tener una comprensión sólida de los conceptos básicos de la programación y cómo aplicarlos en Python. También deberías ser capaz de escribir programas simples y resolver problemas de programación utilizando Python. Si completas todos los ejercicios y problemas del curso, deberías estar bien preparado para continuar aprendiendo Python a un nivel intermedio-avanzado.
