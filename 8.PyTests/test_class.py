@@ -42,10 +42,9 @@ class Encuesta():
         for respuesta in self.__respuestas:
             print('- ' + respuesta)
 
-# This test is inneficient because we create one object per call to the method test_store_single_response.
 
-
-class TestEncuesta(unittest.TestCase):
+# Este test es ineficiente ya que tenemos que crear un objeto Encuesta por cada llamada al método test_guardar_una_respuesta.
+class TestEncuestaIneficiente(unittest.TestCase):
     def test_guardar_una_respuesta(self):
         pregunta = "Cuál es tu lengua materna?"
         encuesta = Encuesta(pregunta)
@@ -55,25 +54,20 @@ class TestEncuesta(unittest.TestCase):
 
 ############################## 2. MANERA EFICIENTE DE HACERLO #####################################
 
+# Python ejecuta el metodo setUp antes de ejecutar cada método que empiece por test_ dentro de una clase que hereda de unittest.TestCase.
+# Por ello si sobreescribimos este método para inicilizar los objetos que vamos a usar en los tests nos ahorraremos mucha memoria evitando crear un objeto por test.
 
-class TestAnonymousSurvey(unittest.TestCase):
-    # Python runs the setUp() method before runningeach method starting with test_.
-    # In this method we create one object survey for all test methods.
+class TestEncuestaEficiente(unittest.TestCase):
     def setUp(self):
-        """
-        Create a survey and a set of responses for use in all test methods.
-        """
-        question = "What language did you first learn to speak?"
-        self.my_survey = AnonymousSurvey(question)
-        self.responses = ['English', 'Spanish', 'Mandarin']
+        pregunta = "Cuáles son los lenguajes que hablas?"
+        self.encuesta = Encuesta(pregunta)
+        self.respuestas = ['Ingles', 'Español', 'Chino']
 
-    def test_store_single_response(self):
-        """Test that a single response is stored properly."""
-        self.my_survey.store_response(self.responses[0])
-        self.assertIn(self.responses[0], self.my_survey.responses)
+    def test_guardar_una_respuesta(self):
+        self.encuesta.guardar_respuesta(self.respuestas[0])
+        self.assertIn(self.respuestas[0], self.encuesta.respuestas)
 
-    def test_store_three_responses(self):
-        """Test that three individual responses are stored properly."""
+    def test_guardar_multiples_respuestas(self):
         for response in self.responses:
             self.my_survey.store_response(response)
         for response in self.responses:
