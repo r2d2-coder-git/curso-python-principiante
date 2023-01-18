@@ -47,7 +47,31 @@ def ordenar_por_longitud(elemento):
 coches = ['Ford', 'Mitsubishi', 'BMW', 'VW']
 coches.sort(key=ordenar_por_longitud)
 
-################# 5.OTROS MÉTODOS ######################
+################# 5.ACCESO A LAS LISTAS ######################
+
+# La forma de acceder a los elementos de una lista es con el operador [inicio:fin]. Indicando el inicio de elementos que quieres de la lista
+# y fin indica el elemento - 1 que va recoger de la lista. Los indices empiezan en 0.
+
+numeros = [1,2,3,4,5]
+
+primer_elemento = numeros[0]
+dos_primeros_elementos = numeros[0:2] #Coge el elemento 0 y 1.
+ultimo_elemento = numeros[-1]
+dos_ultimos_elementos = numeros[-2:] #Cogemos el ultimo y penultimo elemento
+
+# También podemos indicar cada X número de elementos coger un elemento. Con un tercer separador lista[inicio:fin:numero_saltos]. Si numero_saltos
+# es positivo entonces empezamos desde el principio de la lista hasta el final, si numero_saltos es negativo empezamos desde el final hasta el 
+# principio.
+
+todos_elementos = numeros[::1] #Todos los elementos cogemos un elemento por cada elemento. [1,2,3,4,5]
+numeros_impares = numeros[::2] #Aquí estamos diciendo que queremos todos los elementos pero solo nos quedamos con un elemento cada dos. [1,3,5]
+numeros_pares = numeros[1::2] #Desde el segundo elemento hasta el final cogemos elementos de dos en dos. [2,4]
+lista_reversa = numeros[::-1] #Todos los elementos desde el final hasta el principio y de uno en uno [5,4,3,2,1]
+
+print(numeros_impares)
+print(numeros_pares)
+print(lista_reversa)
+################# 6.OTROS MÉTODOS ######################
 
 comida = ['pizza', 'tacos', 'kebab', 'pizza', 'hamburguesa', 'pizza', 'tacos']
 # IMPORTANTE: No asignar una lista a otra variable para copia la lista, 
@@ -60,13 +84,15 @@ comida = comida + ['ensalada', 'manzana'] #Añadir una lista a otra lista, otra 
 comida.index('pizza') #Devuelve el indice de la primera aparición de un elemento de la lista, en este caso el índice 0.
 
 
-# 6. Rangos númericos con la función range(x,y-1) El tipico for (i; i < x; i++) eso en python no existe.
+
+
+# 1.BIS. Rangos númericos con la función range(x,y-1) El tipico for (i; i < x; i++) eso en python no existe.
 for numero in list(range(1, 5)):
     print(numero)
 
 numeros_pares = list(range(2, 11, 2))  # Lista de pares del 2 al 10
 
-# 7. Funciones Built-in de python que se pueden aplicar sobre las listas
+# 2.BIS. Funciones Built-in de python que se pueden aplicar sobre las listas
 min(numeros_pares)  # Minimo de una lista
 max(numeros_pares)  # Maximo de una lista
 sum(numeros_pares)  # Suma los elementos de la lista
