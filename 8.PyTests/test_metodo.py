@@ -1,9 +1,11 @@
 ############################## ¿QUÉ SON LOS TESTS UNITARIOS? #####################################
+
 # Los tests unitarios son pequeñas piezas de código que se escriben para probar que una determinada función o módulo de código funciona correctamente. Sirven para asegurar que el código se comporta de la manera
 # esperada y para detectar posibles errores o regressions en el código a medida que se realizan cambios.
 
 # Los tests unitarios también son útiles para documentar cómo se espera que una función o módulo se comporte, lo que puede ser de gran ayuda para otros desarrolladores que trabajen en el mismo código. Al escribir tests unitarios,
 # es importante asegurarse de que se cubren todos los casos de uso posibles y de que se verifiquen todas las condiciones de frontera. De esta manera, se puede tener más confianza en que el código funcionará correctamente en todos los casos.
+
 ############################## ¿CUÁLES SON LOS ASERTOS MÁS UTILIZADOS? #####################################
 
 # assertEqual(a, b)  Comprobar que a == b

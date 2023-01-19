@@ -71,6 +71,7 @@ lista_reversa = numeros[::-1] #Todos los elementos desde el final hasta el princ
 print(numeros_impares)
 print(numeros_pares)
 print(lista_reversa)
+
 ################# 6.OTROS MÉTODOS ######################
 
 comida = ['pizza', 'tacos', 'kebab', 'pizza', 'hamburguesa', 'pizza', 'tacos']
@@ -89,6 +90,9 @@ comida.index('pizza') #Devuelve el indice de la primera aparición de un element
 # 1.BIS. Rangos númericos con la función range(x,y-1) El tipico for (i; i < x; i++) eso en python no existe.
 for numero in list(range(1, 5)):
     print(numero)
+
+for i, vocal in enumerate(vocales):
+  print(f'El elemento numero {i} es {vocal}')
 
 numeros_pares = list(range(2, 11, 2))  # Lista de pares del 2 al 10
 

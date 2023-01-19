@@ -9,11 +9,10 @@ Este es un curso completo de Python, diseñado para llevar a cualquier persona d
 3. Estructuras de control de flujo (if, for, while)
 4. Funciones
 5. Módulos y paquetes
-6. Trabajar con archivos
-7. Trabajar con cadenas
-8. Trabajar con diccionarios y conjuntos
-9. Trabajar con archivos JSON y CSV
-10. Introducción a la orientación a objetos
+6. Introducción a la orientación a objetos
+7. Trabajar con archivos y excepciones
+9. Trabajar con tests unitarios
+10. Programación funcional
 
 ## Requisitos previos ##
 Este curso asume que no tienes experiencia previa en programación. Sin embargo, se recomienda tener una comprensión básica de cómo funciona una computadora (por ejemplo, saber cómo usar un sistema operativo y cómo navegar por archivos y carpetas).
