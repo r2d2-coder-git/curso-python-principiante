@@ -38,7 +38,15 @@ sum(tupla_num)  # Suma los elementos de la lista
 len(tupla_num)  # Longitud de la lista
 
 ################### 6.ACCESO A LOS TUPLAS #####################
-#No se puede acceder de forma indexada
+
+# Acceso de forma indexada
+print(tupla_uno[0])
+
+# Acceso con intervalos de elementos
+print(tupla_uno[1:3])
+
+# Acceso con bucle for
 for elemento in tupla_tres:
     print(elemento)
+
 
