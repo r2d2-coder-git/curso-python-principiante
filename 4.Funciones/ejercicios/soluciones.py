@@ -149,4 +149,55 @@ pacientes = [{ "nombre": "Pedro", "edad": 45, "sexo": "masculino", "enfermedad":
 
 estadisticas = analizar_datos(pacientes)
 print(estadisticas)
+
+################### EJERCICIO 6 #####################
+
+# 1.Crea una función llamada "convertir_moneda" que convierta dolares a otra moneda. 
+#   La función recibe como argumento "cantidad_dolares" (int) y otro argumento opcional "moneda_destino" donde moneda_destino tiene como valor por defecto "euros", 
+#   retorna un valor tipo float.
+# 2. Dentro de la funcion crear un diccionario llamado "tasas_cambio" con estos valores: 'euros': 0.91, 'yenes': 106.23, 'libras': 0.77.
+# 3. Crea una variable llamada "cantidad_destino" que guarde el valor de "cantidad_dolares" convertida a la moneda destino. Retorna "cantidad_destino"
+# 4. Crea una variable llamada "dolares" con una cantidad; por ejemplo 1000.
+# 5. Llama a la función "convertir_moneda" con "dolares" y "yenes" como parámetros y guarda el resultado en una variable llamada "yenes".
+# 6. Imprime el valor de la variable "yenes".
+
+def convertir_moneda(cantidad_dolares, moneda_destino='euros'):
+    tasas_cambio = {'euros': 0.91, 'yenes': 106.23, 'libras': 0.77}
+    cantidad_destino = cantidad_dolares * tasas_cambio[moneda_destino]
+    return cantidad_destino
+
+dolares = 1000
+yenes = convertir_moneda(dolares,'yenes')
+print(yenes)
+
+################### EJERCICIO 7 #####################
+
+# 1.Crea una función llamada "aplicar_descuento" para comprar un producto en distintas divisas y con posibles descuentos,
+#   que reciba como argumentos "producto" (str), "moneda" (str) como argumento opcional y argumentos **kwargs con productos como key y value siendo un diccionario con el precio 
+#   del producto y el descuento a aplicar. 
+#   (Ejemplo de uso de la función -> aplicar_descuento('zapatos','euros',zapatos={"precio": 12.99, "descuento": 0.1},
+    # collar={"precio": 9.99, "descuento": 0.2},
+    # pulsera={"precio": 19.99, "descuento": 0.15},
+    # gafas={"precio": 29.99, "descuento": 0.25})
+# 2.La función debe calcular el precio final en base a los argumentos recibidos. Si se especifica un descuento, debe aplicarlo al precio. 
+# 3.Si se especifica una moneda diferente a la predeterminada, debe convertir el precio al valor en la moneda especificada, 
+#   con la función realizada en el Ejercicio 6 llamada "convertir_moneda".
+# 5.Usa la función "aplicar_descuento" para calcular el precio final de varios productos con diferentes argumentos opcionales.
+# 6.Asegúrate de manejar el caso en el que no se pase ningún parámetro key-value.
+
+def aplicar_descuento(producto:str, moneda='dolares', **descuentos_kwargs) -> float:
+    if descuentos_kwargs and producto in descuentos_kwargs.keys():
+        precio = descuentos_kwargs[producto]['precio']
+        descuento = descuentos_kwargs[producto]['descuento']
+        precio_con_cambio = convertir_moneda(precio,moneda)
+        precio_con_descuento = precio - (precio_con_cambio * descuento)
+        return precio_con_descuento
+    return -1
     
+
+precio_final = aplicar_descuento('zapatos','euros',zapatos={"precio": 12.99, "descuento": 0.1},
+    collar={"precio": 9.99, "descuento": 0.2},
+    pulsera={"precio": 19.99, "descuento": 0.15},
+    gafas={"precio": 29.99, "descuento": 0.25})
+
+print(precio_final)

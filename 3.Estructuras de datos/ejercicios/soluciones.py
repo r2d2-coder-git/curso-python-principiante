@@ -1,3 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ################### EJERCICIOS DE LISTAS #####################
 
 ################### EJERCICIO 1 #####################
@@ -29,8 +49,9 @@ for compra in compras[::-1]:
 
 ################### EJERCICIO 2 #####################
 
-# 1.Crea una lista llamada "empleados" que contenga 3 listas con 3 nombres de persona cada una. Cada lista vacía un departamento (por ejemplo, ventas, marketing, tecnología).
-# 2.Crea una variable "total_empleados" e inicialízala en cero. Usando un bucle anidado (dentro de otro bucle), recorre cada nombre de cada lista dentro de "empleados" y 
+# 1.Crea una lista llamada "empleados" que contenga 3 listas con 4 nombres de persona cada una. Cada lista vacía representa un departamento (por ejemplo, ventas, marketing, tecnología).
+# Ejemplo: [['Juan','Arturo','Maria','Arturo'],['Alberto','Pedro','Ana','Alberto'],['Andrea','Cristina','Pepe','Alvaro']]
+# 2.Crea una variable "total_empleados_empresa" e inicialízala en cero. Usando un bucle anidado (dentro de otro bucle), recorre cada nombre de cada departamento dentro de "empleados" y 
 # suma 1 a la variable "total_empleados".
 # 3.Usando la función "append()", agrega un nuevo empleado en una lista específica (por ejemplo, en el departamento de tecnología).
 # 4.Usando la función "remove()", elimina un empleado específico de una lista dentro de "empleados" (por ejemplo, el empleado "Juan" en el departamento de ventas).
@@ -39,7 +60,7 @@ for compra in compras[::-1]:
 #   auxiliar llamada "numero_empleados_departamento" inicializada a 0.
 # 7.Usando un bucle anidado, imprime el nombre de cada empleado en cada departamento.
 
-empleados = [['Juan','Arturo','Maria'],['Alberto','Pedro','Ana'],['Andrea','Cristina','Pepe']] #Ventas, marketing, tecnologia
+empleados = [['Juan','Arturo','Maria','Arturo'],['Alberto','Pedro','Ana','Alberto'],['Andrea','Cristina','Pepe','Alvaro']] #Ventas, marketing, tecnologia
 total_empleados = 0
 
 for departamento in empleados:

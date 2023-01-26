@@ -66,3 +66,32 @@
 # 5.Llama a la función "analizar_datos" con la variable "pacientes" como argumento.
 # 6.Dentro de la función "analizar_datos", imprime las estadísticas obtenidas, como "Pacientes masculinos: ", "Pacientes femeninos: ", "Pacientes mayores de 18 años: ", 
 # "Pacientes menores de 18 años: ", "Pacientes enfermos: " y "Pacientes sanos: ".
+
+
+################### EJERCICIO 6 #####################
+
+# 1.Crea una función llamada "convertir_moneda" que convierta dolares a otra moneda. 
+#   La función recibe como argumento "cantidad_dolares" (int) y otro argumento opcional "moneda_destino" donde moneda_destino tiene como valor por defecto "euros", 
+#   retorna un valor tipo float.
+# 2. Dentro de la funcion crear un diccionario llamado "tasas_cambio" con estos valores: 'euros': 0.91, 'yenes': 106.23, 'libras': 0.77.
+# 3. Crea una variable llamada "cantidad_destino" que guarde el valor de "cantidad_dolares" convertida a la moneda destino. Retorna "cantidad_destino"
+# 4. Crea una variable llamada "dolares" con una cantidad; por ejemplo 1000.
+# 5. Llama a la función "convertir_moneda" con "dolares" y "yenes" como parámetros y guarda el resultado en una variable llamada "yenes".
+# 6. Imprime el valor de la variable "yenes".
+
+################### EJERCICIO 7 #####################
+
+# 1.Crea una función llamada "aplicar_descuento" para comprar un producto en distintas divisas y con posibles descuentos,
+#   que reciba como argumentos "producto" (str), "moneda" (str) como argumento opcional y argumentos **kwargs con productos como key y value siendo un diccionario con el precio 
+#   del producto y el descuento a aplicar. 
+#   (Ejemplo de uso de la función -> aplicar_descuento('zapatos','euros',zapatos={"precio": 12.99, "descuento": 0.1},
+    # collar={"precio": 9.99, "descuento": 0.2},
+    # pulsera={"precio": 19.99, "descuento": 0.15},
+    # gafas={"precio": 29.99, "descuento": 0.25})
+# 2.La función debe calcular el precio final en base a los argumentos recibidos. Si se especifica un descuento, debe aplicarlo al precio. 
+# 3.Si se especifica una moneda diferente a la predeterminada, debe convertir el precio al valor en la moneda especificada, 
+#   con la función realizada en el Ejercicio 6 llamada "convertir_moneda".
+# 5.Usa la función "aplicar_descuento" para calcular el precio final de varios productos con diferentes argumentos opcionales.
+# 6.Asegúrate de manejar el caso en el que no se pase ningún parámetro key-value.
+
+            
