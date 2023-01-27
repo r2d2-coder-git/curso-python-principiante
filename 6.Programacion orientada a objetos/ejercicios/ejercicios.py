@@ -11,9 +11,11 @@
 
 ################### EJERCICIO 2 #####################
 
-# 1.Crea un archivo llamado "persona.py" y define una clase llamada "Persona" con atributos como "nombre", "apellido", "edad" y "direccion". También define un método llamado "saludar" que imprima "Hola, mi nombre es [nombre] [apellido] y tengo [edad] años".
-# 2.Crea otro archivo llamado "familia.py" e importa la clase "Persona" del archivo "persona.py" con la sentencia "from persona import Persona"
-# 3.Crea una clase en el archivo "familia.py" llamada "Familia" con un atributo "miembros" que sea una lista vacía. También define un método "agregar_miembro" que reciba un objeto "Persona" como argumento y lo agregue a la lista de miembros de la familia. 
+# 1.Crea un archivo llamado "persona.py" y define una clase llamada "Persona" con atributos como "nombre", "apellido" y "edad". 
+#   También define un método llamado "saludar" que imprima "Hola, mi nombre es [nombre] [apellido] y tengo [edad] años".
+# 2.Crea otro archivo llamado "familia.py" e importa la clase "Persona" del archivo "persona.py" con la sentencia "from persona import Persona".
+# 3.Crea una clase en el archivo "familia.py" llamada "Familia" con un atributo "miembros" que sea una lista vacía. 
+#   También define un método "agregar_miembro" que reciba un objeto "Persona" como argumento y lo agregue a la lista de miembros de la familia. 
 #   Otro método es "listar_miembros" que imprima los detalles de cada miembro de la familia.
 # 4.Crea un archivo llamado "main.py" e importa la clase "Familia" del archivo "familia.py" con la sentencia "from familia import Familia"
 # 5.En el archivo "main.py" crea un objeto "familia" de la clase "Familia" y agrega varios objetos "Persona" a la lista de miembros de la familia utilizando el método "agregar_miembro".
