@@ -35,7 +35,8 @@
 
 ################### EJERCICIO 4 #####################
 
-# 1.Crea un archivo llamado "sistema_de_gestion.py" y define una clase llamada "Empleado" con atributos como "nombre", "apellido", "edad", "cargo" y "salario". 
+# 1.Crea un archivo llamado "sistema_de_gestion.py" y define una clase llamada "Empleado" que herede de la clase "Persona" del ejercicio 2
+#   y agrega los atributos "cargo" y "salario". 
 # 2.También define un método llamado "aumentar_salario" que reciba un porcentaje como argumento y aumente el salario del empleado en ese porcentaje.
 # 3.Crea otra clase llamada "Departamento" con atributos como "nombre" y "empleados" que es una lista vacía. 
 # 4.También define un método "agregar_empleado" que reciba un objeto "Empleado" como argumento y lo agregue a la lista de empleados del departamento. 
@@ -50,8 +51,9 @@
 ################### EJERCICIO 5 #####################
 
 # 1.Crea un archivo llamado "sistema_de_inventario.py" y define una clase llamada "Producto" con atributos como "nombre", "cantidad" y "precio". 
-# 2.También define un método llamado "vender" que reciba una cantidad como argumento y reste esa cantidad al atributo "cantidad" del producto. 
-# 3.También define un método llamado "comprar" que reciba una cantidad como argumento y sume esa cantidad al atributo "cantidad" del producto.
+# 2.También define un método llamado "vender" que reciba una cantidad como argumento, reste esa cantidad al atributo "cantidad" del producto
+#   y retorne True or False si la venta es posible . 
+# 3.También define un método llamado "comprar" que reciba una cantidad como argumento, sume esa cantidad al atributo "cantidad" del producto y no retorne nada.
 # 4.Crea otra clase llamada "Inventario" con atributos como "productos" que es una lista vacía y "total_ventas" que es un número. 
 # 5.También define un método "agregar_producto" que reciba un objeto "Producto" como argumento y lo agregue a la lista de productos del inventario. 
 #     Otro método es "vender_producto" que reciba el nombre del producto y una cantidad, busque el producto correspondiente en la lista de productos y llame al método "vender" en ese producto. 

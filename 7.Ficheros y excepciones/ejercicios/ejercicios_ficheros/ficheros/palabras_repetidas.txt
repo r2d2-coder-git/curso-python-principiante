@@ -1,0 +1,1 @@
+Este fichero sirve para contar palabras repetidas porque si las palabras están repetidas deberiamos eliminar las palabras repetidas.

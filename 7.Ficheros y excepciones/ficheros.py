@@ -5,25 +5,25 @@
 # cerrar un archivo. Pero con la estructura que se muestra aquí, Python lo averiguará por ti.Todo lo que tienes que hacer es abrir el archivo y trabajar con él como desees,
 # confiando en que Python lo cerrará automáticamente cuando sea el momento adecuado.
 
-filename = './pi_digits.txt'
+nombre_fichero = './7.Ficheros y excepciones/pi_digits.txt'
 ############################# LEER EL FICHERO COMPLETO EN UNA VARIABLE #####################################
 
-with open(filename) as file_object:
-    contents = file_object.read()
-    print(contents)
+with open(nombre_fichero) as fichero_abierto:
+    contenido = fichero_abierto.read()
+    print(contenido)
     
 ############################# LEER EL FICHERO LINEA A LINEA #####################################
 
-with open(filename) as file_object:
-    for line in file_object:
-        print(line)
+with open(nombre_fichero) as fichero_abierto:
+    for linea in fichero_abierto:
+        print(linea)
         
 ############################# LEER EL FICHERO LINEA A LINEA #####################################
-with open(filename) as file_object:
-    lines = file_object.readlines()
+with open(nombre_fichero) as fichero_abierto:
+    lineas = fichero_abierto.readlines()
 
 
 ############################# ESCRIBIR CONTENIDO EN EL FICHERO #####################################
-filename = 'programming.txt'
-with open(filename, 'w') as file_object: #open has options: 'r' (read mode) 'w' (write mode) 'a' (append mode)
-    file_object.write("I love programming.")
+nombre_fichero = './7.Ficheros y excepciones/programacion.txt'
+with open(nombre_fichero, 'w') as fichero_abierto: #open has options: 'r' (read mode) 'w' (write mode) 'a' (append mode)
+    fichero_abierto.write("Me encanta programar.")

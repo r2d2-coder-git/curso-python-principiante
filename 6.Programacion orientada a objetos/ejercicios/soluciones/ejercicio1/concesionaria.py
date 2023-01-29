@@ -15,6 +15,6 @@ class Concesionaria():
         self.__inventario_coches = value.copy()
         
     def agregar_vehiculo(self, vehiculo : Vehiculo):
-        self.__inventario_coches.append(vehiculo)
+        self.inventario_coches.append(vehiculo)
     
     
