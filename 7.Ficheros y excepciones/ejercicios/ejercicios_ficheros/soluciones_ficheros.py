@@ -43,7 +43,7 @@ with open(fichero_destino,'w') as fichero_abierto:
 # Puedes utilizar el método write() para escribir en un archivo y el método read() para leer su contenido.
 
 numeros = [1,2,3,4,5,6,7,8,9,10]
-nombre_fichero = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/numeros.txt'
+nombre_fichero = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/numeros.txt'
 
 with open(nombre_fichero,'w') as fichero_abierto:
     for numero in numeros:
