@@ -6,13 +6,16 @@ Este es un curso completo de Python, diseñado para llevar a cualquier persona d
 ## Temas cubiertos ##
 1. Introducción a la programación y a Python
 2. Tipos de datos básicos y operadores en Python
-3. Estructuras de control de flujo (if, for, while)
-4. Funciones
-5. Módulos y paquetes
-6. Introducción a la orientación a objetos
-7. Trabajar con archivos y excepciones
-9. Trabajar con tests unitarios
-10. Programación funcional
+3. Manejo de Strings en Python
+4. Listas en Python
+5. Estructuras de control de flujo (if, for, while)
+6. Sets, diccionarios y tuplas en Python
+7. Funciones
+8. Módulos y paquetes
+9. Introducción a la orientación a objetos
+10. Trabajar con archivos y excepciones
+11. Trabajar con tests unitarios
+12. Programación funcional
 
 ## Requisitos previos ##
 Este curso asume que no tienes experiencia previa en programación. Sin embargo, se recomienda tener una comprensión básica de cómo funciona una computadora (por ejemplo, saber cómo usar un sistema operativo y cómo navegar por archivos y carpetas).
