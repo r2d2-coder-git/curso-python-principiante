@@ -15,7 +15,8 @@ mi_nombre: str = 'r2d2.coder'
 
 ################### OPERADORES #####################
 
-# Un operador es un signo que utilizamos para señalar que operacion realizamos entre dos o más operandos, por ejemplo el operador de suma, el de resta, multiplicación y otros más específicos de la programación
+# Un operador es un signo que utilizamos para señalar que operacion realizamos entre dos o más operandos, por ejemplo el operador de suma, el de resta, 
+# multiplicación y otros más específicos de la programación
 
 ################### OPERADORES ARITMETICOS #####################
 

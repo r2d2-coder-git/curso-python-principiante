@@ -96,6 +96,21 @@ def calculadora(operacion, x, y):
 resultado = calculadora(sumar, 4, 6)
 print(resultado)
 
+############################# FUNCIÓNES QUE DEVUELVE MÁS DE UN VALOR #####################################
+
+
+def dos_elementos(lista:list) -> str:
+    if len(lista) >= 2:
+        return lista[0],lista[1]
+    return "",""
+
+nombres = ['Arturo', 'Pepe','Maria']
+
+nombre1, nombre2 = dos_elementos(nombres)
+
+print(nombre1)
+print(nombre2)
+        
 
 ############################# ORDEN DE PARÁMETROS #####################################
 
