@@ -1,7 +1,7 @@
-List is a collection which is ordered and changeable. Allows duplicate members.
-Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
-Set is a collection which is unordered, unchangeable, and unindexed. No duplicate members.
-Dictionary is a collection which is ordered and changeable. No duplicate members.
+La lista es una colección ordenada y modificable. Permite miembros duplicados.
+TUpla es una colección ordenada e inmutable. Permite miembros duplicados.
+Conjunto es una colección no ordenada, no modificable y no indexada. No admite miembros duplicados.
+Diccionario es una colección ordenada y modificable. No admite miembros duplicados.
 
 ¿Como son los datos que voy a almacenar?
 
