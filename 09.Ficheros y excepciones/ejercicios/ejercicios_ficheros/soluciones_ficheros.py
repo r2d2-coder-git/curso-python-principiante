@@ -6,7 +6,7 @@
 # Crea un script que lea el archivo "contar_palabras.txt" de la carpeta "ficheros" y cuente la cantidad de palabras en él. 
 # Puedes utilizar el método split() para separar las palabras en una lista y luego utilizar la función len() para contar el número de elementos en la lista.
 
-nombre_fichero = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/contar_palabras.txt'
+nombre_fichero = '09.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/contar_palabras.txt'
 
 with open(nombre_fichero) as fichero_abierto:
     contenido = fichero_abierto.read()
@@ -21,8 +21,8 @@ with open(nombre_fichero) as fichero_abierto:
 # Puedes utilizar el método count() para contar la cantidad de veces que aparece una palabra en una cadena de texto, imprimer el número.
 # Reemplaza esta palabra repetida con el método "replace" y vuelve a escribir el texto en otro fichero llamado "palabras_sin_repetir.txt" .
 
-fichero_fuente = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/palabras_repetidas.txt'
-fichero_destino = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/palabras_sin_repetir.txt'
+fichero_fuente = '09.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/palabras_repetidas.txt'
+fichero_destino = '09.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/palabras_sin_repetir.txt'
 
 with open(fichero_fuente,'r') as fichero_abierto:
     contenido = fichero_abierto.read()
@@ -43,7 +43,7 @@ with open(fichero_destino,'w') as fichero_abierto:
 # Puedes utilizar el método write() para escribir en un archivo y el método read() para leer su contenido.
 
 numeros = [1,2,3,4,5,6,7,8,9,10]
-nombre_fichero = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/numeros.txt'
+nombre_fichero = '09.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/numeros.txt'
 
 with open(nombre_fichero,'w') as fichero_abierto:
     for numero in numeros:
@@ -67,8 +67,8 @@ with open(nombre_fichero,'r') as fichero_abierto:
 # Utiliza el módulo "os" también para listar las imagénes de la carpeta "imagenes" con la función "os.listdir(ruta)"
 # Utiliza el módulo "shutil" para copiar cada imagen a la nueva carpeta "imagenes_procesadas" con la función "shutil.copy(ruta_origen,ruta_destino)"
 
-carpeta_fuente = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/imagenes/'
-carpeta_destino = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/imagenes_procesadas/'
+carpeta_fuente = '09.Ficheros y excepciones/ejercicios/ejercicios_ficheros/imagenes/'
+carpeta_destino = '09.Ficheros y excepciones/ejercicios/ejercicios_ficheros/imagenes_procesadas/'
 
 import shutil
 import os
@@ -86,7 +86,7 @@ for imagen in imagenes:
 # donde cada diccionario representa una fila del archivo y las claves son los nombres de las columnas.
 import csv
 
-nombre_fichero = '7.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/vacunaciones.csv'
+nombre_fichero = '09.Ficheros y excepciones/ejercicios/ejercicios_ficheros/ficheros/vacunaciones.csv'
 
 with open(nombre_fichero, 'r') as file:
   lector_filas = csv.DictReader(file)

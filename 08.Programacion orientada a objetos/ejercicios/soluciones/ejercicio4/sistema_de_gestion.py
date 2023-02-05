@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append('6.Programacion orientada a objetos/ejercicios/soluciones/ejercicio2/')
+sys.path.append('08.Programacion orientada a objetos/ejercicios/soluciones/ejercicio2/')
 
 from persona import Persona
 
