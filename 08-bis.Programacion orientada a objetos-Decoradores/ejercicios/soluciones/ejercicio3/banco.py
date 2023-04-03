@@ -6,13 +6,15 @@ class Banco:
     def __init__(self) -> None:
         self.__cuentas = {}
         
-    def get_cuentas(self) -> list:
+    @property
+    def cuentas(self):
         return self.__cuentas
 
-    def set_cuentas(self, value:dict):
+    @cuentas.setter
+    def cuentas(self, value:dict):
         self.__cuentas = value.copy()
     
     def crear_cuenta(self, cuenta: CuentaBancaria) -> None:
-        self.__cuentas.update({cuenta.get_numero_cuenta() : cuenta})
+        self.cuentas.update({cuenta.numero_cuenta : cuenta})
     
     

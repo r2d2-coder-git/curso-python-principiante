@@ -8,24 +8,30 @@ class Persona:
         self.__apellidos = apellidos
         self.__edad = edad
         
-    def get_nombre(self) -> str:
+    @property
+    def nombre(self):
         return self.__nombre
-    
-    def set_nombre(self, value):
+
+    @nombre.setter
+    def nombre(self, value):
         self.__nombre = value
         
-    def get_apellidos(self) -> str:
+    @property
+    def apellidos(self):
         return self.__apellidos
 
-    def set_apellidos(self, value):
+    @apellidos.setter
+    def apellidos(self, value):
         self.__apellidos = value
         
-    def get_edad(self) -> int:
+    @property
+    def edad(self):
         return self.__edad
 
-    def set_edad(self, value):
+    @edad.setter
+    def edad(self, value):
         self.__edad = value
         
     def saludar(self) -> None:
-        print(f"Hola, mi nombre es {self.__nombre} {self.__apellidos} y tengo {self.__edad} años.")
+        print(f"Hola, mi nombre es {self.nombre} {self.apellidos} y tengo {self.edad} años.")
     

@@ -8,4 +8,4 @@ ferrari = Vehiculo('ferrari','el mejor',2023,'rojo')
 concesionaria.agregar_vehiculo(bmw)
 concesionaria.agregar_vehiculo(ferrari)
 
-print(concesionaria.get_inventario_coches())
+print(concesionaria.inventario_coches)

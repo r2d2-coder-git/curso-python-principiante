@@ -27,22 +27,28 @@ class Perro(Mascota):
             'Internacional': 0, 'Nacional': 0, 'Regional': 0
         }
 
-    def get_color_pelo(self) -> str:
+    @property
+    def color_pelo(self):
         return self.__color_pelo
 
-    def set_color_pelo(self, value):
+    @color_pelo.setter
+    def color_pelo(self, value):
         self.__color_pelo = value
 
-    def get_raza(self) -> str:
+    @property
+    def raza(self):
         return self.__raza
 
-    def set_raza(self, value):
+    @raza.setter
+    def raza(self, value):
         self.__raza = value
 
-    def get_trofeos_ganados(self) -> dict:
+    @property
+    def trofeos_ganados(self):
         return self.__trofeos_ganados.copy()
 
-    def set_trofeos_ganados(self, value):
+    @trofeos_ganados.setter
+    def trofeos_ganados(self, value):
         self.__trofeos_ganados = value.copy()
 
     # Sobreescritura del método ganar_torneo, utilizamos la funcionalidad del padre y la extendemos para que la clase Perro pueda guardar
@@ -55,5 +61,5 @@ class Perro(Mascota):
 
 luisito: Perro = Perro('Luisito', 100, 1, 1, 'Pelirrojo', 'Lulu Pomerania')
 luisito.ganar_torneo('Internacional')
-print(luisito.get_nivel())
-print(luisito.get_trofeos_ganados())
+print(luisito.nivel)
+print(luisito.trofeos_ganados)

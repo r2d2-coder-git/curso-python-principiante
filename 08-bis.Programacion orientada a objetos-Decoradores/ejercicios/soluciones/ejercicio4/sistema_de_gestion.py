@@ -13,20 +13,24 @@ class Empleado(Persona):
         self.__cargo = cargo
         self.__salario = salario
         
-    def get_cargo(self) -> str:
+    @property
+    def cargo(self):
         return self.__cargo
 
-    def set_cargo(self, value):
+    @cargo.setter
+    def cargo(self, value):
         self.__cargo = value
         
-    def get_salario(self) -> int:
+    @property
+    def salario(self):
         return self.__salario
 
-    def set_salario(self, value):
+    @salario.setter
+    def salario(self, value):
         self.__salario = value
         
     def aumentar_salario(self, porcentaje : float):
-        self.__salario = self.__salario + (self.__salario * porcentaje)
+        self.salario = self.salario + (self.salario * porcentaje)
     
 class Departamento:
     __nombre : str
@@ -36,24 +40,28 @@ class Departamento:
         self.__nombre = nombre
         self.__empleados = []
     
-    def get_nombre(self) -> str:
+    @property
+    def nombre(self):
         return self.__nombre
 
-    def set_nombre(self, value):
+    @nombre.setter
+    def nombre(self, value):
         self.__nombre = value
         
-    def get_empleados(self) -> list:
+    @property
+    def empleados(self):
         return self.__empleados
 
-    def set_empleados(self, value : list):
+    @empleados.setter
+    def empleados(self, value : list):
         self.__empleados = value.copy()
 
     def agregar_empleado(self, empleado: Empleado) -> None:
-        self.__empleados.append(empleado)
+        self.empleados.append(empleado)
         
     def listar_empleados(self) -> None:
-        for empleado in self.__empleados:
-            print(f"El empleado con nombre {empleado.get_nombre()} {empleado.get_apellidos()} tiene {empleado.get_edad()} años y tiene el cargo {empleado.get_cargo()} con un salario de {empleado.get_salario()}.")
+        for empleado in self.empleados:
+            print(f"El empleado con nombre {empleado.nombre} {empleado.apellidos} tiene {empleado.edad} años y tiene el cargo {empleado.cargo} con un salario de {empleado.salario}.")
 
 
 class Empresa:
@@ -64,23 +72,27 @@ class Empresa:
         self.__nombre = nombre
         self.__departamentos = {}
     
-    def get_nombre(self) -> str:
+    @property
+    def nombre(self):
         return self.__nombre
 
-    def set_nombre(self, value):
+    @nombre.setter
+    def nombre(self, value):
         self.__nombre = value
         
-    def get_departamentos(self) -> dict:
+    @property
+    def departamentos(self):
         return self.__departamentos
 
-    def set_departamentos(self, value : dict):
+    @departamentos.setter
+    def departamentos(self, value : dict):
         self.__departamentos = value.copy()
         
     def agregar_departamento(self, departamento:Departamento) -> None:
-        self.__departamentos.update({departamento.get_nombre() : departamento})
+        self.departamentos.update({departamento.nombre : departamento})
     
     def listar_departamentos(self) -> None:
-        for nombre, departamento in self.__departamentos.items():
+        for nombre, departamento in self.departamentos.items():
             print(f"El departamento {nombre} tiene los siguientes empleados: \n" )
             departamento.listar_empleados()
             print('\n')

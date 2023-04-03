@@ -8,4 +8,4 @@ banco = Banco()
 banco.crear_cuenta(cuenta1)
 banco.crear_cuenta(cuenta2)
 
-print(banco.get_cuentas())
+print(banco.cuentas)

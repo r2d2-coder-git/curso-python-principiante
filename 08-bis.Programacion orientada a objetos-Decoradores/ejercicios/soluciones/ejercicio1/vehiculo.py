@@ -11,29 +11,35 @@ class Vehiculo:
         self.__año = año
         self.__color = color
         
-    
-    def get_marca(self) -> str:
+    @property
+    def marca(self):
         return self.__marca
-    
-    def set_marca(self, value):
-        self.__marca = value
 
-    def get_modelo(self) -> str:
+    @marca.setter
+    def marca(self, value):
+        self.__marca = value
+        
+    @property
+    def modelo(self):
         return self.__modelo
-    
-    def set_modelo(self, value):
+
+    @modelo.setter
+    def modelo(self, value):
         self.__modelo = value
         
-    def get_año(self) -> int:
+    @property
+    def año(self):
         return self.__año
-    
-    def set_año(self, value):
+
+    @año.setter
+    def año(self, value):
         self.__año = value
-   
-    def get_color(self) -> str:
+    @property
+    def color(self):
         return self.__color
-    
-    def set_color(self, value):
+
+    @color.setter
+    def color(self, value):
         self.__color = value
         
         

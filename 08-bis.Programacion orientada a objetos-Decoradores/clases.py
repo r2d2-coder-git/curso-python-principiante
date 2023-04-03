@@ -32,42 +32,50 @@ class Mascota():
 
     ############################# METODOS GETTERS AND SETTERS #####################################
 
-    # Los metodos getters y setters sirven para ofrecer la funcionalidad de obtener el valor o cambiar el valor de los atributos que queremos darle 
-    # la posibilidad al programador que utilice la clase.
+    # Con los decoradores lo que hacemos es convertir el acceso de los atributos como si fuesen publicos, pero en realidad están cumpliendo con
+    # el principio de encapsulamiento de Programación Orienta a Objetos, ya que en realidad se están ejecutando los métodos definidos por nosotros.
 
     # Sintaxis getters: (Los atributos deben ser privados o protegidos, sino no tendría sentido hacer un get o set ya que podemos modificar y
     # consultar los atributos directamente, es más daría un bucle infinito.)
-    
-    # def get_atributo(self) -> tipo_atributo:
+    # @property
+    # def nombre_atributo(self):
     #   return self.__nombre_atributo
 
     # Sintaxis setters:
-    # def set_atributo(self, value) -> None:
+    # @nombre_atributo.setter
+    # def nombre_atributo(self, value):
     #   self.__nombre_atributo = value
 
-    
-    def get_nombre(self) -> str:
+    @property
+    def nombre(self):
         return self.__nombre
 
-    def set_nombre(self, value):
+    @nombre.setter
+    def nombre(self, value):
         self.__nombre = value
 
-    def get_puntos_salud(self) -> int:
+    @property
+    def puntos_salud(self):
         return self._puntos_salud
 
-    def set_puntos_salud(self, puntos_salud):
+    @puntos_salud.setter
+    def puntos_salud(self, puntos_salud):
         self._puntos_salud = puntos_salud
 
-    def get_nivel(self) -> int:
+    @property
+    def nivel(self):
         return self.__nivel
 
-    def set_nivel(self, nivel):
+    @nivel.setter
+    def nivel(self, nivel):
         self.__nivel = nivel
 
-    def get_edad(self) -> int:
+    @property
+    def edad(self):
         return self.__edad
 
-    def set_edad(self, edad):
+    @edad.setter
+    def edad(self, edad):
         self.__edad = edad
 
   ############################# METODOS DE CLASE #####################################
@@ -76,11 +84,11 @@ class Mascota():
 
     def alimentar_mascota(self, comida: str) -> None:
         if comida == 'comida_normal':
-            self._puntos_salud += 10
+            self._salud += 10
         elif comida == 'comida_buena':
-            self._puntos_salud += 20
+            self._salud += 20
         elif comida == 'comida_genial':
-            self._puntos_salud += 30
+            self.salud += 30
 
         print(
             f'Mmm... que rico! Ahora me siento más fuerte y tengo {self._puntos_salud} puntos de salud.')
@@ -93,8 +101,3 @@ class Mascota():
             self.__nivel += 2
         elif tipo_torneo == 'Internacional':
             self.__nivel += 3
-
-
-
-mascota_1 = Mascota('Nemo',10,0,2)
-mascota_1.ganar_torneo('Regional')

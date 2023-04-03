@@ -6,17 +6,15 @@ class Familia:
     def __init__(self) -> None:
         self.__miembros = []
         
-    @property
-    def miembros(self):
+    def get_miembros(self) -> list:
         return self.__miembros
 
-    @miembros.setter
-    def miembros(self, value:list):
-        self.miembros = value.copy()
+    def set_miembros(self, value:list):
+        self.__miembros = value.copy()
     
     def agregar_miemrbro(self, miembro : Persona) -> None:
-        self.miembros.append(miembro)
+        self.__miembros.append(miembro)
     
     def listar_miembros(self) -> None:
-        for miembro in self.miembros:
-            print(f"{miembro.nombre} {miembro.apellidos} con {miembro.edad} años pertenece a la familia.")
+        for miembro in self.__miembros:
+            print(f"{miembro.get_nombre()} {miembro.get_apellidos()} con {miembro.get_edad()} años pertenece a la familia.")

@@ -9,30 +9,36 @@ class CuentaBancaria:
         self.__numero_cuenta = numero_cuenta
         self.__saldo = saldo
         
-    def get_nombre_titular(self) -> str:
+    @property
+    def nombre_titular(self):
         return self.__nombre_titular
-    
-    def set_nombre_titular(self, value):
+
+    @nombre_titular.setter
+    def nombre_titular(self, value):
         self.__nombre_titular = value
         
-    def get_numero_cuenta(self) -> int:
+    @property
+    def numero_cuenta(self):
         return self.__numero_cuenta
 
-    def set_numero_cuenta(self, value):
+    @numero_cuenta.setter
+    def numero_cuenta(self, value):
         self.__numero_cuenta = value
         
-    def get_saldo(self) -> int:
+    @property
+    def saldo(self):
         return self.__saldo
 
-    def set_saldo(self, value):
+    @saldo.setter
+    def saldo(self, value):
         self.__saldo = value
         
     def depositar(self, cantidad:int) -> None:
-        self.__saldo = self.__saldo + cantidad
+        self.saldo = self.saldo + cantidad
     
     def retirar(self, cantidad:int) -> None:
-        if self.__saldo >= cantidad:
-            self.__saldo = self.__saldo - cantidad
+        if self.saldo >= cantidad:
+            self.saldo = self.saldo - cantidad
         else:
             print('No hay suficiente saldo en la cuenta.')
     
