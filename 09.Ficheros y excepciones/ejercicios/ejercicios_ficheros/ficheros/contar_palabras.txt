@@ -1,2 +1,0 @@
-hola me llamo arturo y soy el profesor de este curso de python
-y esto es otra linea de texto

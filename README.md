@@ -13,9 +13,6 @@ Este es un curso completo de Python, diseñado para llevar a cualquier persona d
 7. Funciones
 8. Módulos y paquetes
 9. Introducción a la orientación a objetos
-10. Trabajar con archivos y excepciones
-11. Trabajar con tests unitarios
-12. Programación funcional
 
 ## Requisitos previos ##
 Este curso asume que no tienes experiencia previa en programación. Sin embargo, se recomienda tener una comprensión básica de cómo funciona una computadora (por ejemplo, saber cómo usar un sistema operativo y cómo navegar por archivos y carpetas).
