@@ -1,4 +1,4 @@
-# Curso de Python #
+# Curso de Python principiante #
 ![Alt text](Imagenes/banner-python.jpg/ "Curso de Python")
 
 Este es un curso completo de Python, diseñado para llevar a cualquier persona desde principiantes hasta programadores experimentados. A lo largo de este curso, aprenderás los conceptos básicos de la programación y cómo aplicarlos en Python.
